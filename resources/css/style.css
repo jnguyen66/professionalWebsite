@@ -110,6 +110,7 @@ nav a{
 
 .normNav:hover,
 .normNav:active{
+  text-decoration: none;
   font-weight: bold;
   color:rgb(255, 188, 0);
 }
