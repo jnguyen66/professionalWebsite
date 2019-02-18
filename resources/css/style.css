@@ -64,11 +64,13 @@ header .logo{
 .logoDecA{
   font-weight: none;
   color: hsl(0, 0%, 30%);
+  color: white;
 }
 
 .logoDecB{
   font-weight: none;
-  color:hsl(0, 0%, 45%);
+  color:hsl(0, 0%, 0%);
+  color: rgb(255, 188, 0);
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -87,6 +89,12 @@ header .logo{
   padding-top: 60px;
 }
 
+.lightText{
+  color:white;
+}
+.darkText{
+  color:hsl(0, 0%, 30%);
+}
 nav a{
   margin-left: 1rem;
 }
@@ -94,17 +102,21 @@ nav a{
 
 .normNav{
   font-size: 1.25rem;
-
-}
-
-.normNav:hover{
-  font-weight: bold;
 }
 
 .normNav:link{
   text-decoration: none;
-  color:hsl(0, 0%, 30%);
 }
+
+.normNav:hover,
+.normNav:active{
+  font-weight: bold;
+  color:rgb(255, 188, 0);
+}
+
+
+
+
 
 .normNav::after {
     display: block;
@@ -115,7 +127,14 @@ nav a{
     visibility: hidden;
 }
 
+.navActive{
+	font-weight: bold;
+  color: rgb(255, 188, 0);
+}
 
+#navbarHead{
+    z-index: 3;
+}
 /* Hamburger Styling */
 .hamburger {
   position: absolute;
@@ -156,6 +175,7 @@ nav a{
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+
 }
 
 .nav .nav-wrapper {
@@ -272,8 +292,15 @@ input[type='checkbox'] {
   }
 }
 
-.aboutLeft{
 
+
+/*About Section*/
+.aboutSection{
+background-color: hsl(0, 0%, 95%);
+
+}
+
+.aboutLeft{
   display: flex;
   justify-content: center;
   margin: 40px 0;
@@ -286,17 +313,20 @@ input[type='checkbox'] {
     background-position: center;
     background-size: cover;
     margin:20px;
-
+    z-index: 2;
 
 }
 .aboutPhotoFrame{
-  width:100%;
-  height:100%;
+  width:200px;
+  height:300px;
   position:absolute;
-  border: 7px solid rgba(0, 0, 0, 0.05);
-  top:15px;
-  left:15px;
-  z-index: -1;
+  border: 7px solid rgb(255, 188, 0);
+  margin: 40px 10px 20px 50px;
+  z-index: 1;
+
+}
+.aboutSection .page-header{
+  border-bottom-color: rgb(61, 61, 61);;
 }
 
 .aboutText{
@@ -304,20 +334,24 @@ input[type='checkbox'] {
 }
 .aboutSocialMedia{
   padding-left: 15px;
-  margin-top: 20px;
+  margin: 40px 0px;
 }
 .socialMediaIcons{
 width: 40px;
 height: 40px;
 line-height: 40px;
 text-align: center;
-border: 1px solid #f0f0f0;
+border: 2px solid rgb(61, 61, 61);
 border-radius: 50%;
 font-size: 16px;
 margin: 0 5px;
 display: inline-block;
+margin-right: 40px;
+margin-bottom: 20px;
 }
-
+.socialMediaIcons:hover{
+background-color: rgb(255, 188, 40);
+}
 .aboutContactItem{
   padding: 10px;
 }
@@ -358,6 +392,9 @@ display: inline-block;
 
 .seperator{
   width: 15%;
+  border-color: rgb(61, 61, 61);
+  color: rgb(61, 61, 61);
+  background-color: color: rgb(61, 61, 61);
 }
 
 .resume .tabs-icon {
@@ -370,7 +407,7 @@ display: inline-block;
     margin-bottom: 10px;
 }
 .resume .tabs-icon .active span {
-    color: #d6b161;
+    color: rgb(255, 188, 0);
 }
 .resume .tabs-icon li h6 {
     display: inline-block;
@@ -420,7 +457,7 @@ display: inline-block;
 
 .resume .resume-content li .date {
     font-size: 12px;
-    color: #d6b161;
+    color: rgb(255, 188, 0);
     margin-bottom: 15px;
 }
 .resume .resume-content .active {
@@ -435,7 +472,7 @@ display: inline-block;
     left: -5px;
     width: 10px;
     height: 10px;
-    background: #d6b161;
+    color: rgb(255, 188, 0);
     border-radius: 50%;
 }
 
@@ -448,7 +485,7 @@ display: inline-block;
 
 #tab1:hover,
 #tab2:hover{
-  background: #00FFFF;
+  background: rgb(255, 188, 0);
 }
 
 @media (max-width:380px){
@@ -461,7 +498,7 @@ display: inline-block;
     border-bottom-right-radius: 30px;
   }
 }
-/*Test Section*/
+/*Banner Section*/
 .midBanner{
 background-attachment: fixed;
 background-size: cover;
@@ -471,9 +508,29 @@ height:250px;
 text-align: center;
 color: white;
 }
+.midBanner p{
+  color: white;
+  font-size: 20px;
+}
+
+.glyphicon-comment{
+  font-size: 40px;
+  color: rgb(255, 188, 0);
+}
+.glyphicon-circle-arrow-down{
+  margin-top: 10px;
+  font-size: 60px;
+}
+
+.glyphicon-circle-arrow-down:hover{
+  color: rgb(255, 188, 0);
+}
 
 #banner1{
   background-image: url('../media/banner1.jpg');
+}
+#banner1 div{
+  width:45%;
 }
 #banner2{
   background-image: url('../media/banner2.jpg');
@@ -485,19 +542,34 @@ color: white;
 hr{
   margin: 0 auto;
 }
-.midBanner h5{
+.midBanner h4{
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.midBanner h2{
-  margin-top: 0;
-  padding-top: 0;
-}
+
 .midBanner div{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 60%;
+}
+
+
+
+@media only screen and (max-width: 470px) {
+
+  .midBanner p{
+    font-size: 15px;
+  }
+  .glyphicon-comment{
+    font-size: 20px;
+  }
+  .midBanner div{
+    width:75%;
+  }
+
+
 }
 
 /*Services Section*/
@@ -518,7 +590,7 @@ hr{
 }
 .services .glyphicon{
   font-size: 35px;
-  color: #d6b161;
+  color: rgb(255, 188, 0);
 }
 .services .row{
   margin-bottom: 20px;
@@ -561,35 +633,7 @@ hr{
 }
 
 
-@media (max-width: 600px) {
 
-  .firstItem{
-    text-align: center;
-    width: 100%;
-    height: 400px;
-  }
-  .websiteImg{
-  height: 400px;
-  width: 100%;
-}
-
-}
-
-@media (max-width: 300px) {
-
-  .firstItem{
-    height: 200px;
-    padding-bottom: 20px;
-  }
-  .websiteImg{
-  height: 200px;
-}
-.insideItem{
-  height: 200px;
-  width: 15rem;
-
-}
-}
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -691,7 +735,7 @@ hr{
 }
 
 #info span:hover{
-  background-color: #d6b161;
+  background-color: rgb(255, 188, 0);
 }
 
 .modal {
@@ -782,6 +826,19 @@ border-radius: 5%;
   display:none;
 }
 
+
+@media (max-width: 600px) {
+
+
+
+
+}
+
+@media (max-width: 300px) {
+
+
+}
+
 /*Languages Section*/
 
 
@@ -832,8 +889,13 @@ border-radius: 5%;
 .contact hr{
   margin: 10px 0;
 }
+
+.contactSeperator{
+  width: 15%;
+}
+
 .contact i{
-  color: #d6b161;
+  color: rgb(255, 188, 0);
   font-size: 20px;
 }
 input[type=text], textarea {
@@ -852,7 +914,7 @@ textarea{
 
 }
 input[type=submit]{
-  background: #d6b161;
+  background: rgb(255, 188, 0);
   padding: 5px;
   width:40%;
   margin-top: 2.5rem;
@@ -862,8 +924,8 @@ input[type=submit]{
 
 input[type=submit]:hover{
   background: transparent;
-  color: #d6b161;
-  border: 1px solid #d6b161;
+  color: rgb(255, 188, 0);
+  border: 1px solid rgb(255, 188, 0);
 }
 
 .contactInfo{
@@ -893,6 +955,7 @@ input[type=submit]:hover{
  .contactInfoSections{
    display: inline-block;
    padding: 0 2rem;
+    margin-bottom: 40px;
 }
 
 .contactInfo{
@@ -907,6 +970,7 @@ input[type=submit]:hover{
  .contactInfoSections{
    display: inline-block;
    padding: 0 0.55rem;
+   margin: 30px;
 
 }
 

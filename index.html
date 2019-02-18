@@ -16,7 +16,7 @@
      <script src="./resources/script/scrollIt.js" type="text/javascript"></script>
      <script src="./resources/script/script.js"></script>
   </head>
-  <body>
+  <body >
 
 <section id='home' class='hero section-padding' data-scroll-index='0'>
 <div class='banner'>
@@ -27,12 +27,13 @@
       </div>
 
       <nav class='flex-container' id='navbar'>
-        <a href='#' class='normNav' data-scroll-nav="0" title="Home">Home</a>
-        <a href='#' class='normNav' data-scroll-nav="1" title="About">About</a>
-        <a href='#' class='normNav' data-scroll-nav="2" title="Resume">Resume</a>
-        <a href='#' class='normNav' data-scroll-nav="3" title="Services">Services</a>
-        <a href='#' class='normNav' data-scroll-nav="4" title="Works">Works</a>
-        <a href='#' class='normNav' data-scroll-nav="5" title="Contact">Contact</a>
+        <a href='#' class='normNav lightText' data-scroll-nav="0" title="Home">Home</a>
+        <a href='#' class='normNav lightText' data-scroll-nav="1" title="About">About</a>
+        <a href='#' class='normNav lightText' data-scroll-nav="2" title="Resume">Resume</a>
+        <a href='#' class='normNav lightText' data-scroll-nav="3" title="Services">Services</a>
+        <a href='#' class='normNav lightText' data-scroll-nav="4" title="Works">Works</a>
+        <a href='#' class='normNav lightText' data-scroll-nav="5" title="Services">Languages</a>
+        <a href='#' class='normNav lightText' data-scroll-nav="6" title="Contact">Contact</a>
 
       </nav>
 
@@ -52,7 +53,8 @@
             <a href='#'   class='hideNav' data-scroll-nav="2" title="Resume">Resume</a>
             <a href='#'   class='hideNav' data-scroll-nav="3" title="Services">Services</a>
             <a href='#'   class='hideNav' data-scroll-nav="4" title="Works">Works</a>
-            <a href='#'   class='hideNav' data-scroll-nav="5" title="Contact">Contact</a>
+            <a href='#'   class='hideNav' data-scroll-nav="5" title="Languages">Languages</a>
+            <a href='#'   class='hideNav' data-scroll-nav="6" title="Contact">Contact</a>
           </nav>
         </div>
       </div>
@@ -81,8 +83,9 @@
 <div class='aboutSection row'>
   <div class='aboutLeft col-sm-5'>
     <div class='aboutPhoto' src='./resources/media/profile.jpg'>
-      <div class='aboutPhotoFrame'></div>
+
     </div>
+    <div class='aboutPhotoFrame'></div>
   </div>
 
   <div class='aboutRight col-sm-7'>
@@ -90,7 +93,7 @@
     <h2 class='page-header'>About Me Section</h2>
     <p>
 Hi, I’m Justin. Nice to meet you.
-Since beginning my journey as a freelance developer nearly 2 years ago, I've done remote work for private companies, consulted for colleagues, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually improving my chops.
+Since beginning my journey as a freelance developer, I've done remote work for private companies, consulted for colleagues, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually improving my chops.
 </p>
     <div class='aboutContact'>
       <div class='aboutContactRow row'>
@@ -119,17 +122,18 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
       </div>
     </div>
     <div class='aboutSocialMedia pl-3'>
-      <a href=''><span class='socialMediaIcons'><i class='fa fa-facebook'></i></span></a>
-      <a href=''><span class='socialMediaIcons'><i class='fa fa-linkedin'></i></span></a>
-      <a href=''><span class='socialMediaIcons'><i class='fa fa-github'></i></span></a>
-      <a href=''><span class='socialMediaIcons'><i class='fa fa-instagram'></i></span></a>
+      <a href='https://www.facebook.com/justin.v.nguyen' target="_blank"><span class='socialMediaIcons'><i class='fa fa-facebook'></i></span></a>
+      <a href='https://www.linkedin.com/in/justin-nguyen-b7b88529' target="_blank"><span class='socialMediaIcons'><i class='fa fa-linkedin'></i></span></a>
+      <a href='https://github.com/jnguyen66' target="_blank"><span class='socialMediaIcons'><i class='fa fa-github'></i></span></a>
+      <a href='https://www.instagram.com/jvnn/' target="_blank"><span class='socialMediaIcons'><i class='fa fa-instagram'></i></span></a>
     </div>
     </div>
   </div>
 
 </div>
+
 </section>
-<hr>
+
 
 
 <!-- Resume Section -->
@@ -163,31 +167,93 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
                   <h6 class='sm-title'>Built ravenous</h6>
                   <span class='date'>April 2018</span>
                   <p>
-                    Build Websites From Scratch (HTML, CSS, Javascript)
+                    In this project, I built a website called "Ravenous", a Yelp-like web application that uses React to create a dynamic real world webapp.
                   </p>
                   <p>
-                    Build Front-End Web Apps From Scratch (Javascript and ReactJs)
+                    Ravenous uses props to pass down information between components in the application. The application has a component for the app, bussinesses, the business list, and the search bar.
+                    Upon loading, the search bar component is loaded with an empty business list below. Users are able to send an asynchronous AJAX GET request to the Yelp API for different business based on name and location, which will be sorted by best match.
+                    The busniess list holds the results of all the different business component items when the search retrieves its data from the Yelp API.
+
+
                   </p>
+                  <p>
+                    When the user enters a search request into my Ravenous app, an AJAX GET requests is sent to the Yelp API. Based on the response, the application will update the Business list with real-world data by loading different businesses and their name, address, category, rating, review count, and photo that best match the search request.
+                  </p>
+
                 </li>
                 <li>
                   <h6 class='sm-title'>Jammming</h6>
-                  <span class='date'>2016 - Present</span>
+                  <span class='date'>March 2018</span>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adispisicng elit, sed do eiusmod yempor incididunt ut labore et dolore magna aliqua
+                    For Jammming, I utiltized React components, state, and requests with the Spotify API to build a website that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.
                   </p>
+                  <p>
+                    Spotify Login — the first time a user searches for a song, album, or artist, Spotify will ask them to log in or set up a new account.
+                  </p>
+                  <p>
+                    Search by Song, Album, or Artist — a user can type the name of a song, artist, or album into the search bar and click the "Search" button. The app will request song data about the user's input from the Spotify library.
+                  </p>
+                  <p>
+                    Populate Results List — Jammming displays the list of returned tracks from the user's query.
+                  </p>
+                  <p>
+                    Add Song to a Custom Playlist — users can add a track to their playlist by selecting a + sign on the right side of the track's display container.
+                  </p>
+                  <p>
+                    Remove Song from Custom Playlist — users can remove a track from their playlist by selecting a - sign on the right side of the track's display container.
+                  </p>
+                  <p>
+                    Change Playlist Title — users can change the title of their custom playlist.
+                  </p>
+                  <p>
+                    Save Playlist to Account — users can save their custom playlist by clicking a button called "Save To Spotify".
+                  </p>
+                </li>
+                <li>
+                  <h6 class='sm-title'>Built website for Little Tokyo Associates, LLC</h6>
+                  <span class='date'>May 2017</span>
+                  <p>
+                    I was approached by the landlord to help improve occupany at their building. To improve leasing activity and online presence, I built a building website to help market the property beyond what the leasing brokers were capable of doing.
+                    The site was a multi-page website offering the public property info, building photos, leasing info, new developments, events, and contact information.
+                  </p>
+                  <p>
+                    Visitors were able to view which suites were availible for leasing, the square footage, vacancy type, and download a floor plan of each vacancy. In additon, leasing broker as well a property manager information are listed to help facilitate activity. Within a month of launching the site, building tours increased drastically, and occupancy improved signifcantly giving the building an improved bottom line.
+                  </p>
+
                 </li>
                 <li>
                   <h6 class='sm-title'>Built Student Enrollment program with java</h6>
-                  <span class='date'>2016 - Present</span>
+                  <span class='date'>July 2016</span>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adispisicng elit, sed do eiusmod yempor incididunt ut labore et dolore magna aliqua
+                    Created a student enrollment program that enables students to enroll into classes.
+                    The program was made using Java, GUI items, and binary files to store data.
+                    The users are able to manipulate student data, course info, grade management, and enrollment actions which each are organized
+                    using generic linked list.
                   </p>
-                </li>
-                <li>
-                  <h6 class='sm-title'>Built website for Little TOkyo Associates</h6>
-                  <span class='date'>2016 - Present</span>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adispisicng elit, sed do eiusmod yempor incididunt ut labore et dolore magna aliqua
+                    Upon opening the program, link list for students, courses, and enrollment are created from a generic linked list.
+                    A file input stream would open reading in the students, courses, and enrollment pulled from their respective binary files
+                    and load them into their corresponding linked list.  First, the program window will open with a combo box displayed,
+                    allowing the user to select between "Enter Student Info", "Enter Course Information", "Enter Enrollment Information",
+                    "Grade Management", "Reports".
+                    </p>
+                    <p>
+                    Depending on what the users selects, different GUI items will appear allowing them to
+                    complete their desired action.  Selecting "Enter Student Info", or "Enter Course Information", enables users to add,
+                    view, and edit student/course information. Under “Enter Enrollment Information", they are able to enroll existing
+                    student objects into existing course objects based on semester and year.
+                    </p>
+                    <p>
+                    Grade management allows the user to select
+                    students enrolled in a course for a selected semester and year to give them a grade. The program searches the enrollment
+                    linked list to confirm that said student is in fact enrolled in the class provided for that semester and year. If so, the
+                    action will complete, if not an error will be displayed to the user.
+                    </p>
+                    <p>
+                    This checking system is also completed when users select
+                    to view/edit student/course objects. All these actions are stored onto their respective linked list, and binary files are
+                    overwritten with the updated linked list. Lastly, users can generate a report based on existing courses and year taking,
+                    and a list of all students, the semester, year, and their grade for that course will be displayed.
                   </p>
                 </li>
               </ul>
@@ -230,20 +296,23 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
     </div>
   </div>
 </div>
-</section>
-
-
-<!--Banner Section-->
+<!--Banner -->
 
 <div class='midBanner' id='banner1'>
   <div>
-  <h5>I'm here to create meaningful and lasting relationships with my clients</h5>
-  <h2>Let's Build Something Amazing Together!</h3>
+    <i class='glyphicon glyphicon-comment'></i>
+  <h4>"Justin was amazing to work with. He was very attentive to our delicate needs, and was able to help drastically improve our business."</h4>
+  <h5>-Dr. Fred K. Kurata-</h5>
   </div>
 </div>
 
+</section>
+
+
+
+
 <!--Services Section-->
-<section id='services' class='services ' data-scroll-index='3'>
+<section id='services' class='services' data-scroll-index='3'>
 
 <div class='servicesSection container-fluid'>
   <h2>My Services</h2>
@@ -277,7 +346,7 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
     <div class='servicesTextBox'>
     <i class=' glyphicon glyphicon-tasks'></i>
     <h3>Graphic Design</h3>
-    <span>Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor incid idunt ut labore et.n</span>
+    <span>I dabble in graphic design, and am still working on this skillset.</span>
     </div>
  </div>
  <div class=' servicesSquare  col-sm-4'>
@@ -296,20 +365,23 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
 </div>
 </div>
 </div>
-</section>
 
-<!--Banner Section-->
 
-<div class='midBanner' id='banner2'>
+<!--Banner -->
+<div class='midBanner' id='banner3'>
   <div>
-    <i class='glyphicon glyphicon-comment'></i>
-  <h5>I'm here to create meaningful and lasting relationships with my clients</h5>
-  <h2>Let's Build Something Amazing Together!</h3>
+  <p>I'm here to create meaningful and lasting relationships with my clients</p>
+  <h3>Let's Build Something Amazing Together!</h3>
+  <i class='glyphicon glyphicon-circle-arrow-down' data-scroll-nav="6"></i>
   </div>
 </div>
 
+</section>
+
+
+
 <!--Portfolio Section-->
-<section id='portfolio' class='portfolio ' data-scroll-index='4'>
+<section id='portfolio' class='portfolio' data-scroll-index='4'>
   <div class='portfolioSection container-fluid'>
     <h2>Recent Work</h2>
     <hr class='seperator'/>
@@ -713,20 +785,21 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
 
 
   </div>
+<!--Banner -->
+  <div class='midBanner' id='banner2'>
+    <div>
+
+    <h4>I'm Culver City-bred, wander from NorCal to SoCal, and welcome bribes in the form of Tacos.</h4>
+
+    </div>
+  </div>
+
 </section>
 
-<!--Banner Section-->
 
-<div class='midBanner' id='banner3'>
-  <div>
-    <i class='glyphicon glyphicon-comment'></i>
-  <h5>I'm here to create meaningful and lasting relationships with my clients</h5>
-  <h2>Let's Build Something Amazing Together!</h3>
-  </div>
-</div>
 
 <!--Languages Section-->
-<section id='services' class='services ' data-scroll-index='3'>
+<section id='services' class='services' data-scroll-index='5'>
 
 <div class='servicesSection container'>
   <h2>Languages I Speak</h2>
@@ -784,7 +857,7 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
 
 <!--Contact Section-->
 
-<div class='contact contactBanner container-fluid' data-scroll-index='5'>
+<section class='contact contactBanner container-fluid' data-scroll-index='6'>
 
 
 
@@ -792,7 +865,7 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
   <div class='row'>
   <div class='col-sm-8  col-sm-offset-1' >
     <h2>Get In Touch</h2>
-    <hr class='seperator'/>
+    <hr class='contactSeperator'/>
   <form method="post" name="myemailform" action="form-to-email.php">
 <input type="text" name="name" placeholder="Name"><input type="text" name="email" placeholder="Email"><br />
 <input type="text" name="subject" placeholder="Subject"><br/>
@@ -817,7 +890,7 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
     Operating in Sunny Southern California<br />
   </span>
   </div>
-  <div class='contactInfoSections'>
+  <div class='contactInfoSecctions'>
   <i class='glyphicon glyphicon-envelope'></i><br />
   <span>Email:</span><br />
   <span class='contactDetail'>
@@ -838,7 +911,7 @@ Since beginning my journey as a freelance developer nearly 2 years ago, I've don
 </p>
 
 
-</div>
+</section>
 
 
 

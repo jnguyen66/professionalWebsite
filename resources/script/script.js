@@ -1,6 +1,6 @@
 var pos = 0;
 var turn = 0;
-var data = ['WEB DEVELOPER','UI/UX DESIGNER','DATABASE MANAGEMENT'];
+var data = ['WEB DEVELOPER','UI/UX DESIGNER','DATABASE MANAGER'];
 var speed = 125;
 
 setTimeout(typeWriter, speed);
@@ -51,11 +51,19 @@ var sticky = demo.offsetTop;
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbarHead.classList.add("sticky")
+    navbarHead.classList.add("sticky");
+    $('.normNav').removeClass("lightText");
+    $('.normNav').addClass("darkText");
+    $('.logoDecA').addClass("darkText");
   } else {
     navbarHead.classList.remove("sticky");
+    $('.logoDecA').removeClass("darkText");
+    $('.normNav').removeClass("darkText");
+    $('.normNav').addClass("lightText");
   }
 }
+
+
 
 
 //Clicking on education or expeirence buttons changes viewable content
@@ -79,6 +87,7 @@ function myFunction() {
       expIcon.classList.toggle('activeIcon');
       eduIcon.classList.toggle('activeIcon');
       }
+
 });
 
 

@@ -20,7 +20,7 @@
         downKey: 40,
         easing: 'linear',
         scrollTime: 600,
-        activeClass: 'active',
+        activeClass: 'navActive',
         onPageChange: null,
         topOffset : 0
     };
@@ -33,6 +33,10 @@
         var settings = $.extend(defaults, options),
             active = 0,
             lastIndex = $('[data-scroll-index]:last').attr('data-scroll-index');
+
+//////////////////////////////////////////
+
+
 
         /*
          * METHODS
@@ -48,10 +52,13 @@
             if(ndx < 0 || ndx > lastIndex) return;
 
             var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset + 1- 40;
+
             $('html,body').animate({
                 scrollTop: targetTop,
                 easing: settings.easing
             }, settings.scrollTime);
+
+
         };
 
         /**
@@ -114,7 +121,7 @@
          * watches currently active item and updates accordingly
          */
         var watchActive = function() {
-            var winTop = $(window).scrollTop();
+            var winTop = $(window).scrollTop()+40;
 
             var visible = $('[data-scroll-index]').filter(function(ndx, div) {
                 return winTop >= $(div).offset().top + settings.topOffset &&
@@ -122,19 +129,30 @@
             });
             var newActive = visible.first().attr('data-scroll-index');
             updateActive(newActive);
+            var fromBottom = $(document).height() - ($(window).scrollTop() + $(window).height()-2);
+            var scrollHeight = $(document).height()
+            if ((window.innerHeight + window.scrollY)+2 >= document.body.offsetHeight){     // <-- scrolled to the bottom
+                $('nav a.navActive').removeClass('navActive');
+                $('nav a:last-child').addClass('navActive');
+            }
+
+
         };
 
         /*
          * runs methods
          */
-        $(window).on('scroll',watchActive).scroll();
 
+
+         $(window).on('scroll',watchActive).scroll();
         $(window).on('keydown', keyNavigation);
 
         $('body').on('click','[data-scroll-nav], [data-scroll-goto]', function(e){
             e.preventDefault();
             doScroll(e);
+          
         });
+
 
     };
 }(jQuery));
