@@ -278,7 +278,9 @@ input[type='checkbox'] {
 
 
 @media only screen and (max-width: 470px) {
-
+  .banner{
+    background attachment: scroll;
+  }
   .bannerText{
     width: 250px;
     font-size: 2rem;
@@ -512,6 +514,9 @@ position: relative;
 height:250px;
 text-align: center;
 color: white;
+
+
+
 }
 .midBanner p{
   color: white;
@@ -563,7 +568,9 @@ hr{
 
 
 @media only screen and (max-width: 470px) {
-
+  .midBanner{
+  background-attachment: scroll;
+  }
   .midBanner p{
     font-size: 15px;
   }
