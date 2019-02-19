@@ -275,11 +275,15 @@ input[type='checkbox'] {
   color: rgb(255, 188, 0);
  }
 
-
+ @media (max-width: 767px) {
+   .banner{
+     background: url(../media/mainBanner.jpg) no-repeat center center scroll;
+   }
+ }
 
 @media only screen and (max-width: 470px) {
   .banner{
-    background attachment: scroll;
+    background: url(../media/mainBanner.jpg) no-repeat center center scroll;
   }
   .bannerText{
     width: 250px;
@@ -312,6 +316,7 @@ background-color: hsl(0, 0%, 95%);
   justify-content: center;
   margin: 40px 0;
 }
+
 .aboutPhoto{
     background-image: url('../media/profile.jpg');
     height:300px;
@@ -507,7 +512,7 @@ background-color: rgb(255, 188, 40);
 }
 /*Banner Section*/
 .midBanner{
-/*background-attachment: fixed;*/
+background-attachment: fixed;
 background-size: cover;
 background-position: 50% 0%;
 position: relative;
@@ -565,7 +570,11 @@ hr{
   width: 60%;
 }
 
-
+@media (max-width: 767px) {
+  .midBanner{
+  background-attachment: scroll;
+  }
+}
 
 @media only screen and (max-width: 470px) {
   .midBanner{
@@ -964,6 +973,9 @@ input[type=submit]:hover{
 }
 
 @media (max-width: 767px) {
+  .contactBanner{
+    background-attachment: scroll;
+  }
  .contactInfoSections{
    display: inline-block;
    padding: 0 2rem;
@@ -979,6 +991,9 @@ input[type=submit]:hover{
 
 
 @media (max-width: 576px) {
+  .contactBanner{
+    background-attachment: scroll;
+  }
  .contactInfoSections{
    display: inline-block;
    padding: 0 0.55rem;
