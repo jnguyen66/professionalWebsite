@@ -241,7 +241,11 @@ input[type='checkbox'] {
 }
 
 .banner{
-  background: url(../media/mainBanner.jpg) no-repeat center center fixed;
+  background-image: url(../media/mainBanner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
   background-position: cover;
   height:100vh;
   -webkit-background-size: 100%;
@@ -252,6 +256,9 @@ input[type='checkbox'] {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+
+
 }
 
 .bannerText{
@@ -277,13 +284,13 @@ input[type='checkbox'] {
 
  @media (max-width: 767px) {
    .banner{
-     background: url(../media/mainBanner.jpg) no-repeat center center scroll;
+      background-attachment: scroll;
    }
  }
 
 @media only screen and (max-width: 470px) {
   .banner{
-    background: url(../media/mainBanner.jpg) no-repeat center center scroll;
+      background-attachment: scroll;
   }
   .bannerText{
     width: 250px;
