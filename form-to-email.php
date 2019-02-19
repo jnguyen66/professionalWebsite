@@ -10,6 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 require "vendor/autoload.php";
 $name = $_POST["name"];
 $visitor_email = $_POST["email"];
+$subject = $_POST["subject"];
 $message = $_POST["message"];
 
 
@@ -19,7 +20,7 @@ try{
 
 
     //Server settings
-    $mail->SMTPDebug = 1;                                 // Enable verbose debug output
+   $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = "smtp.gmail.com";  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -34,12 +35,13 @@ try{
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = "Here is the subject";
-    $mail->Body    = "This is $message the HTML message body <b>in bold!</b> $name";
+    $mail->Subject = $subject;
+    $mail->Body    = "$message <br /> Best Regards,<br /> $name <br /> $visitor_email";
 
 
     $mail->send();
-    echo "Message has been sent";
+    header("Location:index.html");
+  //  echo "Message has been sent";
 }catch(Exception $e){
     echo "Message could not be sent. Mailer Error: ", $mail->ErrorInfo;
 }
