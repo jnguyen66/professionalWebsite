@@ -505,7 +505,7 @@ background-color: rgb(255, 188, 40);
 }
 /*Banner Section*/
 .midBanner{
-background-attachment: fixed;
+/*background-attachment: fixed;*/
 background-size: cover;
 background-position: 50% 0%;
 position: relative;
