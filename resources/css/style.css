@@ -241,7 +241,7 @@ input[type='checkbox'] {
 }
 
 .banner{
-  background: url(../media/mainBanner.jpeg) no-repeat center center fixed;
+  background: url('https://i.imgur.com/m9TPbac.jpg') no-repeat center center fixed;
   background-position: cover;
   height:100vh;
   -webkit-background-size: 100%;
