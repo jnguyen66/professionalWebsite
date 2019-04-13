@@ -226,22 +226,22 @@ var modal = document.getElementById('myModal');
 //var img = document.getElementById('myImg2');
 var modalImg = document.getElementById("img01");
 
-document.getElementById('webS1').onclick= modalFunc;
-document.getElementById('webS2').onclick= modalFunc;
-document.getElementById('webS3').onclick= modalFunc;
-document.getElementById('webS4').onclick= modalFunc;
-document.getElementById('webS5').onclick= modalFunc;
+//document.getElementById('webS1').onclick= modalFunc;
+//document.getElementById('webS2').onclick= modalFunc;
+//document.getElementById('webS3').onclick= modalFunc;
+//document.getElementById('webS4').onclick= modalFunc;
+//document.getElementById('webS5').onclick= modalFunc;
 document.getElementById('webS6').onclick= modalFunc;
-document.getElementById('webS7').onclick= modalFunc;
-document.getElementById('webS8').onclick= modalFunc;
-document.getElementById('webS9').onclick= modalFunc;
-document.getElementById('webS10').onclick= modalFunc;
-document.getElementById('webS11').onclick= modalFunc;
+//document.getElementById('webS7').onclick= modalFunc;
+//document.getElementById('webS8').onclick= modalFunc;
+//document.getElementById('webS9').onclick= modalFunc;
+//document.getElementById('webS10').onclick= modalFunc;
+//document.getElementById('webS11').onclick= modalFunc;
 document.getElementById('webS12').onclick= modalFunc;
-document.getElementById('webS13').onclick= modalFunc;
-document.getElementById('webS14').onclick= modalFunc;
-document.getElementById('webS15').onclick= modalFunc;
-document.getElementById('webS16').onclick= modalFunc;
+//document.getElementById('webS13').onclick= modalFunc;
+//document.getElementById('webS14').onclick= modalFunc;
+//document.getElementById('webS15').onclick= modalFunc;
+//document.getElementById('webS16').onclick= modalFunc;
 //Src is not getting sent to modal img. WHy. seems to work with img tag not a link tag
 function modalFunc(e){
 
@@ -256,6 +256,7 @@ function modalFunc(e){
 /*Closes Modal when clicking anywhere*/
 modal.addEventListener('click',function(){
 this.style.display="none";
+modalImg.src = null;
 })
 /*
 img.onclick = function(){

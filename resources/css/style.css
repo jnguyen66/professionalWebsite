@@ -541,11 +541,12 @@ color: white;
 }
 .glyphicon-circle-arrow-down{
   margin-top: 10px;
+  color: rgb(255, 188, 0);
   font-size: 60px;
 }
 
 .glyphicon-circle-arrow-down:hover{
-  color: rgb(255, 188, 0);
+  color: lightgreen;
 }
 
 #banner1{
@@ -616,7 +617,7 @@ hr{
 .servicesTextBox{
   border-right: 1px solid rgba(0, 0, 0, 0.05);
 }
-.services .glyphicon{
+.servicesGlyphicon{
   font-size: 35px;
   color: rgb(255, 188, 0);
 }
@@ -702,7 +703,7 @@ hr{
   background-image: url('../media/9aFlexBoxTravel.png');
 }
 #websiteImg10{
-  background-image: url('../media/10aSpikeSpiegel.png');
+  background-image: url('../media/10aBruceWinter.png');
 }
 #websiteImg11{
   background-image: url('../media/11aCommercialPainting.png');
@@ -724,8 +725,8 @@ hr{
 }
 .websiteImg{
   -webkit-transition: 0.3s;
-     -o-transition: 0.3s;
-     transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   background-size: 100% 100%;
   height: 500px;
   width: 300px;
@@ -781,9 +782,10 @@ hr{
 
 /* Modal Content (Image) */
 .modal-content {
-    margin: auto;
+    margin: 5% auto;
     display: block;
-    max-width: 900px;
+    max-width: 70%;
+    max-height: 80%;
 }
 
 
@@ -820,7 +822,12 @@ hr{
 @media only screen and (max-width: 700px){
     .modal-content {
         width: 100%;
+        margin: 5% auto;
+        max-height: 100%;
+        max-width: 100%;
     }
+
+  
 }
 
 
@@ -855,17 +862,6 @@ border-radius: 5%;
 }
 
 
-@media (max-width: 600px) {
-
-
-
-
-}
-
-@media (max-width: 300px) {
-
-
-}
 
 /*Languages Section*/
 
