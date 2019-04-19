@@ -25,13 +25,13 @@ try{
     $mail->Host = "smtp.gmail.com";  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = "javenassociates@gmail.com";                 // SMTP username
-    $mail->Password = "g.mail66";                           // SMTP password
+    $mail->Password = "email66!";                           // SMTP password
     $mail->SMTPSecure = "ssl";                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('javenassociates@gmail.com', 'Mailer');
-    $mail->addAddress("jvnguyen66@gmail.com");     // Add a recipient
+    $mail->addAddress("jvncdunn2@gmail.com");     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
