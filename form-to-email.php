@@ -31,7 +31,7 @@ try{
 
     //Recipients
     $mail->setFrom('javenassociates@gmail.com', 'Mailer');
-    $mail->addAddress("javenvo66@gmail.com");     // Add a recipient
+    $mail->addAddress("jvncdunn2@gmail.com");     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
