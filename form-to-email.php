@@ -4,7 +4,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-
+<?xml version="1.0" encoding="utf-8"?>'
 
 //Load Composer"s autoloader
 require "vendor/autoload.php";
