@@ -1,10 +1,18 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="utf-8" http-equiv="encoding" />
+</head>
+<body>
 <?php
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-<?xml version="1.0" encoding="utf-8"?>'
+
 
 //Load Composer"s autoloader
 require "vendor/autoload.php";
@@ -18,20 +26,20 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 
 try{
 
-    $mail->SMTPDebug = 3;  
+
     //Server settings
-    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+   $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = "smtp.gmail.com";  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = "javenassociates@gmail.com";                 // SMTP username
     $mail->Password = "email66!";                           // SMTP password
     $mail->SMTPSecure = "ssl";                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 443;                                    // TCP port to connect to
+    $mail->Port = 465;                                    // TCP port to connect to
 
     //Recipients
     $mail->setFrom('javenassociates@gmail.com', 'Mailer');
-    $mail->addAddress("jvncdunn2@gmail.com");     // Add a recipient
+    $mail->addAddress("jvnguyen66@gmail.com");     // Add a recipient
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
@@ -40,11 +48,13 @@ try{
 
 
     $mail->send();
-    header("content-type: text/html");
-    //header("content-type: image/jpegLocation:index.htmlLocation:index.html");
+    header("Location:index.html");
   //  echo "Message has been sent";
 }catch(Exception $e){
     echo "Message could not be sent. Mailer Error: ", $mail->ErrorInfo;
 }
 
  ?>
+
+</body>
+</html>
