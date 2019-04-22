@@ -26,6 +26,7 @@ try{
     $mail->Host = "smtp.gmail.com";  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Encoding = "base64";
+    $mail->CharSet = "utf-8";
     $mail->Username = "javenassociates@gmail.com";                 // SMTP username
     $mail->Password = "email66!";                           // SMTP password
     $mail->SMTPSecure = "ssl";                            // Enable TLS encryption, `ssl` also accepted
