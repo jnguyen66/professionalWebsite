@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-
-<html>
-<head>
-<meta charset="utf-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<meta content="utf-8" http-equiv="encoding" />
-</head>
-<body>
 <?php
+header('Content-Type: text/html; charset=utf-8');
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -56,6 +48,3 @@ try{
 }
 
  ?>
-
-</body>
-</html>
