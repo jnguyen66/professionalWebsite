@@ -18,9 +18,9 @@ $mail = new PHPMailer(true);                              // Passing `true` enab
 
 try{
 
-
+    $mail->SMTPDebug = 3;  
     //Server settings
-   $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = "smtp.gmail.com";  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
