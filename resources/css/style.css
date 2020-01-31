@@ -325,7 +325,7 @@ background-color: hsl(0, 0%, 95%);
 }
 
 .aboutPhoto{
-    background-image: url('../media/profile.jpg');
+    background-image: url('../media/profile.png');
     height:300px;
     width:200px;
     position:relative;
@@ -723,6 +723,10 @@ hr{
 #websiteImg16{
   background-image: url('../media/16aDavesBurgers.png');
 }
+
+#websiteImg17{
+  background-image: url('../media/17aTenTerraces.png');
+}
 .websiteImg{
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -922,7 +926,7 @@ border-radius: 5%;
   color: rgb(255, 188, 0);
   font-size: 20px;
 }
-input[type=text], textarea {
+input[type=text], input[type=email], textarea {
   background: transparent;
   border: none;
   border-bottom: 1px solid gray;
